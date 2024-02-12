@@ -1,5 +1,5 @@
-const selectionButtons = document.querySelectorAll("[data-selection]")
-const finalColum = document.querySelector("[data-final-colum]")
+const selectionButtons = document.querySelectorAll('[data-selection]')
+const finalColumn = document.querySelector('[data-final-column]')
 const SELECTIONS = [
     {
         name:'rock',
@@ -19,7 +19,7 @@ const SELECTIONS = [
 ]
 
 selectionButtons.forEach(selectionButton => {
-    selectionButton.addEventListener("click", e => {
+    selectionButton.addEventListener('click', e => {
        const selectionName = selectionButton.dataset.selection
        const selection = SELECTIONS.find(selection => selection.name === selectionName)
        makeSelection(selection)
@@ -37,11 +37,11 @@ function makeSelection(selection) {
 }
 
 function addSelectionResult(selection, winner) {
-    const div = docyment.createElement('div')
+    const div = document.createElement('div')
     div.innerText = selection.emoji
-    div.classList.add("result-selection")
+    div.classList.add('result-selection')
     if (winner) div.classList.add('winner')
-    finalColum.after(div)
+    finalColumn.after(div)
 }
 
 function isWinner(selection, opponentSelection) {
