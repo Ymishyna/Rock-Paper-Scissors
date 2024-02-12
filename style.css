@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(184, 248, 248);
+}
+
+.selections {
+    display: flex;
+    justify-content: center;
+}
+
+.selection {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 90px;
+    transition: 190ms;
+}
+
+.selection:hover {
+    transform: scale(1.3);
+}
