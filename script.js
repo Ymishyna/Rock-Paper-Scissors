@@ -28,6 +28,7 @@ selectionButtons.forEach(selectionButton => {
     })
 })
 
+//logic for selecting emoji
 function makeSelection(selection) {
     const computerSelection = randomSelection()
     const yourWinner = isWinner(selection, computerSelection)
@@ -44,6 +45,7 @@ function incrementScore(scoreSpan) {
     scoreSpan.innerText = parseInt(scoreSpan.innerText) + 1
 }
 
+//displaying new results
 function addSelectionResult(selection, winner) {
     const div = document.createElement('div')
     div.innerText = selection.emoji
@@ -56,6 +58,7 @@ function isWinner(selection, opponentSelection) {
     return selection.beats === opponentSelection.name
 }
 
+//computer logic 
 function randomSelection() {
     const randomIndex = Math.floor(Math.random() * SELECTIONS.length)
     return SELECTIONS[randomIndex]
